@@ -1,0 +1,178 @@
+
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* NAVIGATION */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 25px 5%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #aaa;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* HERO SECTION */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* BACKGROUND IMAGE */
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    background-image: url("profile.jpeg");
+    background-size: cover;
+    background-position: center 58%;
+    background-repeat: no-repeat;
+
+    filter: grayscale(100%) brightness(0.9);
+
+    transform: scale(1.02);
+}
+
+/* DARK OVERLAY */
+
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: rgba(0, 0, 0, 0.18);
+}
+
+
+/* HERO TEXT */
+
+.hero-content {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.intro {
+    font-size: 12px;
+    letter-spacing: 6px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: clamp(65px, 15vw, 190px);
+    font-weight: 900;
+    letter-spacing: -8px;
+    line-height: 1;
+    color: #fff;
+}
+
+.hero-content h1 span {
+    color: #aaa;
+}
+
+.signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(28px, 5vw, 55px);
+    color: #ddd;
+    margin-top: 5px;
+}
+
+
+/* BOTTOM TEXT */
+
+.hero-bottom {
+    position: absolute;
+    bottom: 45px;
+    left: 5%;
+    right: 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.hero-bottom p {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+.hero-bottom a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
