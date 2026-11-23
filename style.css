@@ -60,15 +60,15 @@
  color: #aaa;
  }
 
+ /* HAMBURGER MENU */
  .menu-toggle {
- display: none;
- background: none;
- border: none;
- color: white;
- font-size: 25px;
- cursor: pointer;
- }
-
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
 
  /* HERO SECTION */
 
@@ -252,3 +252,457 @@
  font-weight: 700;
  letter-spacing: 1px;
  }
+
+/* ================================
+   SKILLS PAGE
+================================ */
+
+.skills-page {
+    min-height: 100vh;
+    padding: 35px 7%;
+    color: #fff;
+    background:
+        radial-gradient(ellipse at 50% 45%, rgba(255,255,255,0.055), transparent 50%),
+        #111;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+/* HEADER */
+
+.skills-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #333;
+}
+
+.skills-brand {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.skills-brand span {
+    color: #888;
+    font-weight: 400;
+}
+
+.skills-page-number {
+    color: #888;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.skills-page-number span {
+    color: #fff;
+    font-weight: 700;
+}
+
+/* INTRODUCTION */
+
+.skills-intro {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+    margin: 55px 0 45px;
+}
+
+.skills-heading p {
+    margin-bottom: 8px;
+    color: #aaa;
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
+}
+
+.skills-heading h1 {
+    max-width: 650px;
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.12;
+    font-weight: 900;
+}
+
+.skills-description {
+    padding: 15px 0 15px 35px;
+    border-left: 1px solid #777;
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* TECHNOLOGY LOGOS */
+
+.technology-logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    margin: 45px 0 55px;
+    text-align: center;
+}
+
+.technology {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.technology-circle {
+    width: 145px;
+    height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #777;
+    border-radius: 50%;
+    background: #181818;
+    box-shadow: 0 0 20px rgba(255,255,255,0.06);
+    transition: 0.3s ease;
+}
+
+.technology-circle:hover {
+    transform: translateY(-7px);
+    border-color: #ddd;
+    box-shadow: 0 0 25px rgba(255,255,255,0.15);
+}
+
+.technology-circle img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.github-logo img {
+    filter: brightness(0) invert(1);
+}
+
+.technology h3 {
+    color: #ddd;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* SKILL PERCENTAGES */
+
+.skills-progress {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    margin-top: 55px;
+}
+
+.progress-column {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.skill-item {
+    width: 100%;
+}
+
+.skill-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.skill-info h3,
+.skill-info span {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.skill-info span {
+    color: #aaa;
+}
+
+.progress-track {
+    width: 100%;
+    height: 8px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #333;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #777, #eee);
+}
+
+.html-fill {
+    width: 85%;
+}
+
+.css-fill {
+    width: 80%;
+}
+
+.javascript-fill {
+    width: 60%;
+}
+
+.git-fill {
+    width: 65%;
+}
+
+.github-fill {
+    width: 70%;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+
+    .skills-page {
+        padding: 25px 6%;
+    }
+
+    .skills-header {
+        padding-bottom: 22px;
+    }
+
+    .skills-brand {
+        font-size: 15px;
+    }
+
+    .skills-page-number {
+        font-size: 12px;
+    }
+
+    .skills-intro {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 35px 0;
+    }
+
+    .skills-heading p {
+        font-size: 29px;
+    }
+
+    .skills-heading h1 {
+        font-size: 34px;
+    }
+
+    .skills-description {
+        padding: 0 0 0 18px;
+        font-size: 14px;
+    }
+
+    .technology-logos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px 12px;
+        margin: 35px 0;
+    }
+
+    .technology-circle {
+        width: 90px;
+        height: 90px;
+    }
+
+    .technology-circle img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .technology h3 {
+        font-size: 13px;
+    }
+
+    .skills-progress {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    .progress-column {
+        gap: 22px;
+    }
+
+    .skill-info h3,
+    .skill-info span {
+        font-size: 15px;
+    }
+
+    .skills-footer {
+        gap: 12px;
+        margin-top: 40px;
+    }
+
+    .skills-footer p {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+     /* HOME PAGE */
+    .hero-content h1 {
+        font-size: clamp(65px, 14vw, 130px);
+        letter-spacing: -4px;
+    }
+
+    .hero-bottom {
+        left: 4%;
+        right: 4%;
+        bottom: 30px;
+    }
+
+    /* ABOUT PAGE */
+    .about-container {
+        padding: 120px 5% 50px;
+    }
+
+    .about-section {
+        gap: 30px;
+    }
+
+    .about-image,
+    .about-content {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+
+/* MOBILE PHONES */
+@media screen and (max-width: 600px) {
+
+    /* NAVIGATION */
+    .header {
+        padding: 20px 6%;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 45px;
+        right: 0;
+        width: 190px;
+        background: #181818;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 12px;
+        z-index: 20;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 13px 8px;
+        font-size: 13px;
+    }
+
+
+    /* HOME PAGE */
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero-content {
+        padding: 15px;
+    }
+
+    .intro {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(48px, 15vw, 85px);
+        letter-spacing: -3px;
+    }
+
+    .signature {
+        font-size: 35px;
+    }
+
+    .hero-bottom {
+        bottom: 25px;
+        left: 6%;
+        right: 6%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 15px;
+    }
+
+    .hero-bottom p,
+    .hero-bottom a {
+        font-size: 9px;
+        line-height: 1.6;
+    }
+
+
+    /* ABOUT PAGE */
+    .about-container {
+        padding: 110px 6% 40px;
+    }
+
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .about-image img {
+        display: block;
+        width: 100%;
+        max-height: 380px;
+        object-fit: cover;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content h1 {
+        font-size: clamp(35px, 10vw, 55px);
+    }
+
+    .about-content h2 {
+        font-size: 23px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .about-highlight {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
